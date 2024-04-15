@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sanpham.css">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js.map"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+
+    <style>
+      /* CSS cho màu đỏ */
+      .user-authenticated {
+          color: red;
+      }
+      #addToCartMessage {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background-color: #28a745; /* Màu xanh lá cây (Bootstrap success color) */
+          color: #fff;
+          padding: 10px;
+          text-align: center;
+          z-index: 9999;
+      }
+      #featured > div.product.row.mx-auto.container > div:nth-child(n) > div.product-item-image-wrapper > a > img{
+        width: 100%;
+        height: 300px;
+      }
+      #featured > div.product.row.mx-auto.container > div:nth-child(n) > div.product-item-image-wrapper{
+        max-width: 220px; 
+        height: 300px;
+      }
+  </style>
+  </head>
+<body class="container-fluid">
+    
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top">
+        <div class="container">
+          <img src="../img/logo.png" alt="">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span<i id="bar" class="fa-solid fa-bars"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link  " href="../html/trangchu.html">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <div class="dropdown">
+                  <div class="row">
+                    <a class="nav-link p-0 pl-4 active" href="../html/sanpham.html">Sản phẩm</a>
+                    <div  class=" dropdown-toggle pr-4" data-toggle="dropdown">
+                    </div>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item text-primary" id="searchCayPhongThuy " href="../html/timkiemsptcayphongthuy.html" >Cây Phong Thủy</a>
+                    <a class="dropdown-item text-primary" id="searchTrangSuc" href="../html/timkiemspts.html">Trang sức</a>
+                    <a class="dropdown-item text-primary" id="searchTuong" href="../html/timkiemsptuong.html" >Tuợng</a>
+                    <a class="dropdown-item text-primary" id="searchSach" href="../html/timkiemsptsach.html">Sách Phong Thuỷ</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../html/Gioithieu.html">Giới Thiệu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="lienhe.html">Liên hệ</a>
+              </li>
+              <li class="nav-item d-flex justify-content-between ml-2 mr-3">
+                <div class="input-group ">
+                  <input type="search" id="search_input" class="form-outline form-control"/>
+                  <i class="fas fa-search search_icons btn btn-primary pt-2"></i>
+                </div>
+                <div class="cart-group">
+                  <i class="cart fa-solid fa-shopping-bag"></i>
+                  <span class="cart-num"></span>
+                </div>
+                <i style="font-size: 35px;" id="account" class="sign_out user fa-solid fa-user"  ></i>
+  
+              </li> 
+            </ul> 
+          </div> 
+        </div>
+      </nav>
+    
+    <!-- section -->
+    <div id="result"></div>
+
+    <section id="featured" class="my-5 py-5">
+      <div class="container mt-5 py-5">
+        <h2 class="font-weight-bold">Tất cả sản phẩm</h2>
+        <hr">
+        <p>Tất cả sản phẩm của shop YUSHAN tại đây</p>
+      </div>
+      
+      <!-- <div  class="row mx-auto container products" id="products"></div> -->
+      <!-- Product -->
+      <div id="addToCartMessage" class="alert alert-success" style="display:none;">
+        Sản phẩm đã được thêm vào giỏ hàng!
+      </div>    
+      <div class="product row mx-auto container ">
+        <!-- javascript -->
+      </div>
+        <!-- Pagination -->
+        <nav class="container" aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+              </a>
+            </li>
+            <li class="page-item active"><a class="page-link link-1" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+    </section>
+   
+    
+    <footer class="mt-5 py-5" >
+        <div class="row container mx-auto pt-5">
+          <div class="footer-one col-lg-3 col-md-6 col-12">
+            <img src="../img/logo.png" alt="">
+            <p class="pt-3">Chúng tôi luôn trân trọng và mong đợi nhận được mọi ý kiến đóng góp từ khách hàng để có thể nâng cấp trải nghiệm dịch vụ và sản phẩm tốt hơn nữa.</p>
+  
+          </div>
+  
+          <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+            <h5 class="pb-2" >Featured</h5>
+            <ul class="text-uppercase list-unstyled">
+              <li><a href="../html/cayphongthuy.html">Cây Phong Thủy</a></li>
+              <li><a href="#">Trang sức</a></li>
+              <li><a href="#">Tuợng</a></li>
+              <li><a href="#">Sách Phong Thuỷ</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+            <h5 class="pb-2" >Contact Us</h5>
+            <div>
+              <h6 class="text-uppercase">ĐỊA CHỈ LIÊN HỆ:</h6>
+              <p>12 Nguyễn Văn Bảo, P.4, Q. Gò Vấp, TP.HCM </p>
+            </div>
+  
+            <div>
+              <h6 class="text-uppercase">Điện thoại:</h6>
+              <p>0944042100</p>
+            </div>
+  
+            <div>
+              <h6 class="text-uppercase">Email:</h6>
+              <p>sondeptrainhatquadatvippro@gmail.com</p>
+            </div>
+          </div>
+  
+          <div class="footer-one col-lg-3 col-md-6 col-12">
+            <h5 class="pb-2">Instagram</h5>
+            <div class="row">
+                <img class="img-fluid w-25 h-100 m-2" src="../img/insta/1.jpg" alt="">
+                <img class="img-fluid w-25 h-100 m-2" src="../img/insta/2.jpg" alt="">
+                <img class="img-fluid w-25 h-100 m-2" src="../img/insta/3.jpg" alt="">
+                <img class="img-fluid w-25 h-100 m-2" src="../img/insta/4.jpg" alt="">
+                <img class="img-fluid w-25 h-100 m-2" src="../img/insta/5.jpg" alt="">
+            </div>
+          </div>
+  
+        </div>
+  
+        <div class=" row copyright mt-5">
+          <div class="row container mx-auto">
+            <div class="col-lg-3 col-md-6 col-12 mb-4">
+              <img src="../img/payment.png" alt="">
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 text-nowrap mb-2">
+              <p>Liên hệ chúng tôi:</p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+              <a href=""><i class="fa-brands fa-twitter"></i></a>
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+  
+      </footer>
+  
+    <script src="../js/LoadSanPham.js"></script>
+    <script src="../js/timKiemSP.js"></script>
+    <script src="../js/Giohang.js"></script>
+    <script src="../js/account.js"></script>
+    <script src="../js/addcart.js"></script>
+    <script src="../js/loadcart.js"></script>
+    <script src="../js/danhmucsp.js"></script>
+
+
+
+
+</body>
+</html>

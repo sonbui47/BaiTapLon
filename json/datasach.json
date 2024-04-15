@@ -1,0 +1,11 @@
+[
+ 
+ 
+  {
+      "id": 15,
+      "productName": "Sách Phong Thủy",
+      "productImage": "../img/shop/sach.jpg",
+      "productPriceCurrent": "80$",
+      "description": "Sách dạy về phong thuỷ."
+  }
+]

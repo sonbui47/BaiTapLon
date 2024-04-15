@@ -1,0 +1,101 @@
+[
+  {
+      "id": 1,
+      "productName": "Cây Phong Thủy Mạ Vàng",
+      "productImage": "../img/shop/caymavang.jpg",
+      "productPriceCurrent": "100$",
+      "description": "Cây phong thủy được mạ vàng, mang lại sự giàu sang và thịnh vượng cho gia chủ."
+  },
+  {
+      "id": 2,
+      "productName": "Đá Phong Thủy Tinh Dầu",
+      "productImage": "../img/shop/dendauda.jpg",
+      "productPriceCurrent": "100$",
+      "description": "Đá phong thủy chế tác từ tinh dầu, giúp cân bằng năng lượng và tạo ra môi trường thuận lợi cho sức khỏe và tinh thần."
+  },
+  {
+      "id": 3,
+      "productName": "Tuổi Hợi Vàng 24K",
+      "productImage": "../img/shop/heovang.jpg",
+      "productPriceCurrent": "75$",
+      "description": "Tuổi hợi được làm từ vàng 24K, biểu tượng của may mắn và tài lộc."
+  },
+  {
+      "id": 4,
+      "productName": "Quả Cầu Phong Thủy",
+      "productImage": "../img/shop/cauphongthuy.jpg",
+      "productPriceCurrent": "250$",
+      "description": "Quả cầu phong thủy với khả năng hút và lưu trữ năng lượng tích cực, giúp tăng cường sức khỏe và may mắn cho gia chủ."
+  },
+  {
+      "id": 5,
+      "productName": "Bình Phun Nước Phong Thủy",
+      "productImage": "../img/shop/binhphunnuoc.jpg",
+      "productPriceCurrent": "90$",
+      "description": "Bình Phun nước phong thủy với hương thơm dễ chịu, giúp làm sạch không gian và tạo ra môi trường thuận lợi cho tinh thần."
+  },
+  {
+      "id": 6,
+      "productName": "Bộ Bài Tarot",
+      "productImage": "../img/shop/tarot.jpg",
+      "productPriceCurrent": "50$",
+      "description": "Bộ bài Tarot được sử dụng để đoán bói và tư vấn tinh thần, giúp hiểu rõ hơn về quá khứ, hiện tại và tương lai."
+  },
+  {
+      "id": 7,
+      "productName": "Gối Massage Đá Phong Thủy",
+      "productImage": "../img/shop/goida.jpg",
+      "productPriceCurrent": "120$",
+      "description": "Gối massage chế tác từ đá phong thủy, giúp xoa dịu căng thẳng và mệt mỏi, cân bằng năng lượng trong cơ thể."
+  },
+  {
+      "id": 8,
+      "productName": "Lục Bình Phong Thủy",
+      "productImage": "../img/shop/lucbinh.jpg",
+      "productPriceCurrent": "70$",
+      "description": "Lục bình phong thủy là biểu tượng của sự may mắn và thịnh vượng, được sử dụng để trang trí và tạo ra không gian tích cực."
+  },
+  {
+      "id": 9,
+      "productName": "Mặt Dây Chuyền Phong Thủy",
+      "productImage": "../img/shop/matdaychuyen.jpg",
+      "productPriceCurrent": "60$",
+      "description": "Mặt dây chuyền chế tác từ đá phong thủy, mang lại sự bảo vệ và may mắn cho người sử dụng."
+  },
+  {
+      "id": 10,
+      "productName": "Thiềp Vàng Phong Thủy",
+      "productImage": "../img/shop/thepvang.jpg",
+      "productPriceCurrent": "80$",
+      "description": "Thiềp vàng phong thủy là biểu tượng của sự giàu có và thành công, mang lại may mắn và tài lộc cho gia chủ."
+  },
+  {
+      "id": 12,
+      "productName": "Bùa Phong Thủy ",
+      "productImage": "../img/shop/bua.jpg",
+      "productPriceCurrent": "80$",
+      "description": "Bùa phong thủy được chế tác từ các vật liệu tự nhiên, mang lại sức mạnh và bảo vệ cho gia đình."
+  },
+  {
+      "id": 13,
+      "productName": "Móc Khóa Tỳ Hưu Vàng",
+      "productImage": "../img/shop/tyhuuvang.jpg",
+      "productPriceCurrent": "80$",
+      "description": "Móc khóa Tỳ Hưu Vàng là biểu tượng của sự may mắn và bình an, mang lại bảo vệ và tài lộc cho người sử dụng."
+  },
+  {
+      "id": 14,
+      "productName": "Bình Hoa Phong Thủy",
+      "productImage": "../img/shop/binhhoa.jpg",
+      "productPriceCurrent": "80$",
+      "description": "Bình hoa phong thủy được trang trí bằng các loại hoa và lá phong thủy, mang lại sự tươi mới và tích cực cho không gian."
+  },
+ 
+  {
+      "id": 15,
+      "productName": "Sách Phong Thủy",
+      "productImage": "../img/shop/sach.jpg",
+      "productPriceCurrent": "80$",
+      "description": "Sách dạy về phong thuỷ."
+  }
+]

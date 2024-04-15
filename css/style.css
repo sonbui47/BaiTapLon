@@ -1,0 +1,165 @@
+body{
+    font-family: 'Poppins' ,sans-serif;
+}
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+h3{
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+h4{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+h5{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #1d1d1d;
+}
+
+h6{
+    color: #D8D8D8;
+}
+
+button{
+    font-size: 0.8rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    background-color: #1d1d1d;
+    color: aliceblue;
+    padding: 13px 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover{
+    background-color: #3a3833;
+}
+
+hr{
+    width: 200px;
+    background-color: #fb774b;
+}
+
+.star{
+    padding: 10px 0;
+}
+
+.star i{
+    font-size: 1rem;
+    color: goldenrod;
+
+}
+
+.navbar a{
+    color: #D8D8D8;
+    font-weight: 600;
+    
+}
+.navbar{
+    font-size: 20px;
+    top: 0;
+    left: 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1) ;
+}
+
+.navbar-light .collapse .navbar-nav .nav-link{
+    padding: 0 20px;
+    color: black;
+    transition: 0.3s ease;
+}
+
+
+.navbar-light .collapse .navbar-nav .nav-link:hover,
+.navbar i:hover,
+.navbar-light .collapse .navbar-nav .nav-link.active,
+.navbar i.active{
+    color: coral;
+
+}
+
+.navbar i{
+    font-size: 1.1rem;
+    padding: 0 2px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.navbar .cart-group{
+    position: relative;
+}
+.navbar .cart-group .cart{
+    font-size: 35px;
+    text-align: right;
+}
+
+.navbar .cart-group .cart-num{
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 3px;
+}
+
+.product-item .buy-btn:hover,
+.product-item .cart-btn:hover{
+    background-color: #3a3833;
+}
+
+
+
+footer{
+    background-color: #222222;
+}
+
+footer h5{
+    color: #D8D8D8;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+footer li a{
+    font-size: 0.8rem;
+    color: #999;
+}
+
+footer li a:hover{
+    color: #D8D8D8;
+}
+
+footer p{
+    color: #999;
+    font-size: 0.8rem;
+}
+
+footer .copyright a{
+    color: #000;
+    width: 38px;
+    height: 38px;
+    background-color: #fff;
+    display: inline-block;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    margin: 0 5px;
+}
+
+footer .copyright a:hover{
+    color: #fff;
+    background-color: #fb774b;
+}

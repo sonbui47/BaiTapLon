@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style>
+        .dangky{
+            border: 1px solid #333;
+            padding: 10px ;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="dangky container col-12 mt-5 text-center ">
+        <h2>Đăng Ký Tài khoản</h2>
+        <form id="registerForm">
+            <div class="form-group row">
+                <label for="username" class="col-sm-4 col-form-label text-right">Tên đăng nhập</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="txtUsername" placeholder="Bắt đầu bằng chữ cái, có số chữ hoa, thường, kí tự đặt biệt">
+                </div>
+                <span id="errorUsername" class="text-danger font-italic">*</span>
+            </div>
+            
+
+            <!-- password -->
+            <div class="form-group row">
+                <label for="password" class="col-sm-4 col-form-label text-right">Mật khẩu</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="txtpassword" placeholder="Nhập mật khẩu">
+                </div>
+                <span id="err_pass" class="text-danger font-italic">*</span>
+            </div>
+            
+            <!-- nhap lai -->
+            
+            <div class="form-group row">
+                <label for="confirmPassword" class="col-sm-4 col-form-label text-right">Nhập lại mật khẩu</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="txtconfirmPassword" placeholder="Nhập lại mật khẩu">
+                </div>
+                <span id="err_confirmPassword" class="text-danger font-italic">*</span>
+            </div>
+            <h2>Thông tin cá nhân</h2>
+            <!-- Họ và tên -->
+            <div class="form-group row">
+                <label for="fullName" class="col-sm-4 col-form-label text-right">Họ và Tên</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="txtfullName" placeholder="Nhập họ và tên">
+                </div>
+                <span id="err_fullName" class="text-danger font-italic">*</span>
+            </div>
+            <!-- Ngày sinh -->
+            <div class="form-group row">
+                <label for="dob" class="col-sm-4 col-form-label text-right">Ngày Sinh</label>
+                <div class="col-sm-4">
+                    <input type="date" class="form-control" id="dob">
+                </div>
+                <span id="err_dob" class="text-danger font-italic"></span>
+                
+
+            </div>
+            <!-- Giới tính -->
+            <div class="form-group row">
+                <label for="gender" class="col-sm-4 col-form-label text-right">Giới tính</label>
+                <div class="col-sm-4">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="male" value="Nam">
+                        <label class="form-check-label" for="male">
+                            Nam
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="female" value="Nữ">
+                        <label class="form-check-label" for="female">
+                            Nữ
+                        </label>
+                    </div>
+                </div>
+                <span id="err_gender" class="text-danger font-italic"></span>
+
+            </div>
+            <!-- Địa chỉ -->
+            <div class="form-group row">
+                <label for="address" class="col-sm-4 col-form-label text-right">Địa chỉ</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="address" placeholder="Nhập địa chỉ">
+                </div>
+                <span id="err_address" class="text-danger font-italic"></span>
+            </div>
+            <!-- Điện thoại -->
+            <div class="form-group row">
+                <label for="phone" class="col-sm-4 col-form-label text-right">Điện thoại</label>
+                <div class="col-sm-4">
+                    <input type="tel" class="form-control" id="phone" placeholder="Nhập số điện thoại">
+                </div>
+                <span id="err_phone" class="text-danger font-italic">Phải là số</span>
+            </div>
+            <!-- Email -->
+            <div class="form-group row">
+                <label for="email" class="col-sm-4 col-form-label text-right">Email</label>
+                <div class="col-sm-4">
+                    <input type="email" class="form-control" id="email" placeholder="Nhập địa chỉ email">
+                </div>
+                <span id="err_email" class="text-danger font-italic">Nhập đúng địa chỉ mail</span>
+            </div>
+            <!-- Nút đăng ký và hủy -->
+            <div class="form-group row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <button type="submit" id="loadDataTable" onclick="register()"  class="btn btn-primary mr-2" >Đăng ký</button>
+                    
+                        <button class="btn btn-secondary" id="huy" ><a class="text-white" href="../html/dangnhap.html">Hủy</a></button>
+                        
+                </div>
+                <span id="err_mtbh" class="err">(*)</span>
+            </div>
+        </form>
+    </div>
+
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/dangkitk.js"></script>
+    
+
+</body>
+</html>

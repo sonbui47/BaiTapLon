@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Đăng Nhập</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/giohang.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+
+   
+   <script src="../js/jquery-3.4.1.min.js"></script>
+   <script src="../js/bootstrap.bundle.min.js"></script>
+   <script src="../js/bootstrap.bundle.min.js.map"></script>
+   <script src="../js/bootstrap.bundle.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row  d-flex flex-column align-items-center"> 
+        <h2>Thông tin cá nhân</h2>
+        <div class="card" style="width: 500px;">
+            <div class="card-body" style="width: 100%;">
+                <ul class="list-group">
+                    <li class="list-group-item text-left"><strong>Username:</strong> <span id="username"></span></li>
+                    <li class="list-group-item text-left"><strong>Password:</strong> <span id="password"></span></li>
+                    <li class="list-group-item text-left"><strong>FullName:</strong> <span id="fullName"></span></li>
+                    <li class="list-group-item text-left"><strong>Sex:</strong> <span id="sex"></span></li>
+
+                    <li class="list-group-item text-left"><strong>Phone:</strong> <span id="phone"></span></li>
+                    <li class="list-group-item text-left"><strong>Address:</strong> <span id="address"></span></li>
+                    <li class="list-group-item text-left"><strong>Email:</strong> <span id="email"></span></li>
+                    <li class="list-group-item text-left"><strong>Ngày sinh:</strong> <span id="ngaysinh"></span></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    
+        <div class="row ">
+            <div class="col-4"></div>
+            <div class="col-4 d-flex justify-content-between mt-5">
+            <button id="back">Back</button>
+            <button id="log-out">Log out</button>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <script>
+        // Lấy thông tin từ sessionStorage
+        var userInfo = sessionStorage.getItem("userInfo");
+    
+        // Kiểm tra xem thông tin có tồn tại không
+        if (userInfo) {
+            // Chuyển đổi chuỗi JSON thành đối tượng JavaScript
+            var userData = JSON.parse(userInfo);
+    
+            // Hiển thị thông tin trên trang
+            displayUserInfo(userData);
+        }
+    
+        function displayUserInfo(userData) {
+            // Hiển thị thông tin trong các thẻ span tương ứng
+            document.getElementById("username").innerText = userData.username;
+            document.getElementById("password").innerText = userData.password;
+            document.getElementById("fullName").innerText = userData.fullName;
+            document.getElementById("sex").innerText = userData.sex;
+            document.getElementById("phone").innerText = userData.phone;
+            document.getElementById("address").innerText = userData.address;
+            document.getElementById("email").innerText = userData.email;
+            document.getElementById("ngaysinh").innerText = userData.ngaysinh;
+        }
+    </script>
+    
+    <script>
+        function checkUserInfoAndRedirect() {
+            // Kiểm tra nếu thông tin người dùng không tồn tại trong sessionStorage
+            if (sessionStorage.getItem("userInfo") === null) {
+                // Chỗ này bạn có thể thêm các xử lý khác nếu cần
+            } else {
+                document.getElementById("log-out").style.color = "red";
+                document.getElementById("log-out").addEventListener("click", function() {
+                    sessionStorage.removeItem("userInfo");
+                    location.reload();
+                    window.location.href = "../html/sanpham.html";
+                });
+                document.getElementById("back").addEventListener("click", function() {
+                    window.history.back();
+                });
+            }
+        }
+    
+        // Gọi hàm ngay sau khi trang được load
+        checkUserInfoAndRedirect();
+    </script>
+    
+    
+
+</body>
+</html>

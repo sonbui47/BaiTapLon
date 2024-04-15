@@ -1,0 +1,33 @@
+[
+  {
+      "id": 1,
+      "productName": "Cây Phong Thủy Mạ Vàng",
+      "productImage": "../img/shop/caymavang.jpg",
+      "productPriceCurrent": "100$",
+      "description": "Cây phong thủy được mạ vàng, mang lại sự giàu sang và thịnh vượng cho gia chủ."
+  },
+  {
+      "id": 5,
+      "productName": "Bình Phun Nước Phong Thủy",
+      "productImage": "../img/shop/binhphunnuoc.jpg",
+      "productPriceCurrent": "90$",
+      "description": "Bình Phun nước phong thủy với hương thơm dễ chịu, giúp làm sạch không gian và tạo ra môi trường thuận lợi cho tinh thần."
+  },
+  
+  {
+      "id": 8,
+      "productName": "Lục Bình Phong Thủy",
+      "productImage": "../img/shop/lucbinh.jpg",
+      "productPriceCurrent": "70$",
+      "description": "Lục bình phong thủy là biểu tượng của sự may mắn và thịnh vượng, được sử dụng để trang trí và tạo ra không gian tích cực."
+  },
+  {
+      "id": 14,
+      "productName": "Bình Hoa Phong Thủy",
+      "productImage": "../img/shop/binhhoa.jpg",
+      "productPriceCurrent": "80$",
+      "description": "Bình hoa phong thủy được trang trí bằng các loại hoa và lá phong thủy, mang lại sự tươi mới và tích cực cho không gian."
+  }
+ 
+ 
+]

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng</title>
+     <link rel="stylesheet" href="../css/style.css">
+     <link rel="stylesheet" href="../css/trangchu.css">
+     <link rel="stylesheet" href="../css/giohang.css">
+     <link rel="stylesheet" href="../css/bootstrap.min.css">
+     <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+ 
+    
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js.map"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+
+</head>
+    <body class="container-fluid">
+    
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top">
+      <div class="container">
+        <img src="../img/logo.png" alt="">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span<i id="bar" class="fa-solid fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active " href="../html/trangchu.html">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <div class="dropdown">
+                <div class="row">
+                  <a class="nav-link p-0 pl-4" href="../html/sanpham.html">Sản phẩm</a>
+                  <div  class=" dropdown-toggle pr-4" data-toggle="dropdown">
+                  </div>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item text-primary" id="searchCayPhongThuy " href="../html/timkiemsptcayphongthuy.html" >Cây Phong Thủy</a>
+                    <a class="dropdown-item text-primary" id="searchTrangSuc" href="../html/timkiemspts.html">Trang sức</a>
+                    <a class="dropdown-item text-primary" id="searchTuong" href="../html/timkiemsptuong.html" >Tuợng</a>
+                    <a class="dropdown-item text-primary" id="searchSach" href="../html/timkiemsptsach.html">Sách Phong Thuỷ</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/Gioithieu.html">Giới Thiệu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="lienhe.html">Liên hệ</a>
+            </li>
+            <li class="nav-item d-flex justify-content-between ml-2 mr-3">
+              <div class="input-group ">
+                <input type="search" id="search_input" class="form-outline form-control"/>
+                <i class="fas fa-search search_icons btn btn-primary pt-2"></i>
+              </div>
+              <div class="cart-group">
+                <i class="cart fa-solid fa-shopping-bag"></i>
+                <span class="cart-num"></span>
+              </div>
+              <i style="font-size: 35px;" id="account" class="sign_out user fa-solid fa-user"  ></i>
+
+            </li> 
+          </ul> 
+        </div> 
+      </div>
+    </nav>
+    <!-- section -->
+    <section id="featured" class="my-5 py-5">
+        <div class="container mt-5 py-5">
+          <h2 class="font-weight-bold">Giỏ hàng</h2>
+        </div> 
+          
+    </section>
+    
+      <div class="container ">
+        <div class="productcart">
+
+        </div>
+        <div id="cartItems"></div>
+        <div class="thu"></div>
+
+      </div> 
+        
+  
+
+    <section id="cart-container" class="container my-5">
+      <div class="row">
+        <div class="col-12 "></div>
+            <table class="table table-borderless">
+                <thead>
+                  <td>STT</td>
+                  <td>Hình ảnh</td>
+                  <td>Sản phẩm</td>
+                  <td>Giá</td>
+                  <td>Số lượng</td>
+                  <td>Tổng</td>
+                </thead>
+                <tbody id="danhsach">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+  </section>
+
+
+    <section id="cart-bottom" class="container">
+        <div class="row">
+            <div class="coupon col-lg-6 col-md-6 col-12 mb-4">
+                <div>
+                    <h5>MÃ GIẢM GIÁ</h5>
+                    <p>Hãy nhập mã giảm giá</p>
+                    <input type="text" name="voucher"   id="voucher" placeholder="Nhập mã giảm giá">
+                    <button>Nhập</button>
+                </div>
+            </div>
+
+            <div class="total col-lg-5 col-md-5 col-12 mb-4">
+                <div>
+                    <div class="d-flex justify-content-between">
+                        <h6 class="text-dark font-weight-bold">Thành tiền</h6>
+                        <p class="text-size" style="font-size: 20px" id="tongTien"></p>
+                    </div>
+                    <hr class="second-hr">
+
+                    <button class="ml-auto">Đặt hàng</button>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+   
+    <footer class="mt-5 py-5" >
+      <div class="row container mx-auto pt-5">
+        <div class="footer-one col-lg-3 col-md-6 col-12">
+          <img src="../img/logo.png" alt="">
+          <p class="pt-3">Chúng tôi luôn trân trọng và mong đợi nhận được mọi ý kiến đóng góp từ khách hàng để có thể nâng cấp trải nghiệm dịch vụ và sản phẩm tốt hơn nữa.</p>
+
+        </div>
+
+        <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+          <h5 class="pb-2" >Featured</h5>
+          <ul class="text-uppercase list-unstyled">
+            <li><a href="#">Cây Phong Thủy</a></li>
+            <li><a href="#">Trang sức</a></li>
+            <li><a href="#">Tuợng</a></li>
+            <li><a href="#">Sách Phong Thuỷ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+          <h5 class="pb-2" >Contact Us</h5>
+          <div>
+            <h6 class="text-uppercase">ĐỊA CHỈ LIÊN HỆ:</h6>
+            <p>12 Nguyễn Văn Bảo, P.4, Q. Gò Vấp, TP.HCM </p>
+          </div>
+
+          <div>
+            <h6 class="text-uppercase">Điện thoại:</h6>
+            <p>0944042100</p>
+          </div>
+
+          <div>
+            <h6 class="text-uppercase">Email:</h6>
+            <p>sondeptrainhatquadatvippro@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="footer-one col-lg-3 col-md-6 col-12">
+          <h5 class="pb-2">Instagram</h5>
+          <div class="row">
+              <img class="img-fluid w-25 h-100 m-2" src="../img/insta/1.jpg" alt="">
+              <img class="img-fluid w-25 h-100 m-2" src="../img/insta/2.jpg" alt="">
+              <img class="img-fluid w-25 h-100 m-2" src="../img/insta/3.jpg" alt="">
+              <img class="img-fluid w-25 h-100 m-2" src="../img/insta/4.jpg" alt="">
+              <img class="img-fluid w-25 h-100 m-2" src="../img/insta/5.jpg" alt="">
+          </div>
+        </div>
+
+      </div>
+
+      <div class=" row copyright mt-5">
+        <div class="row container mx-auto">
+          <div class="col-lg-3 col-md-6 col-12 mb-4">
+            <img src="../img/payment.png" alt="">
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 text-nowrap mb-2">
+            <p>Liên hệ chúng tôi:</p>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+    
+    
+
+</body>
+</html>
